@@ -1,0 +1,26 @@
+.btn {
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.03);
+  }
+
+.mb-3{
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+h2{
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.links{
+  padding-top: 50px;;
+}
+
+.lead{
+  margin-top: 20px;
+}
