@@ -6,7 +6,8 @@ import Contact from './Contact.jsx';
 import PhotoGallery from "./components/PhotoGallery";
 import BioLinks from './BioLinks.jsx';
 
-import './App.css';
+import './app.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Footer.jsx';
 
@@ -21,6 +22,8 @@ function App() {
         <Route path="/components/photogallery" element={<PhotoGallery />} />
         <Route path="/biolinks" element={<BioLinks />} />
       </Routes>
+      
+
       <Footer/>
     </>
   );

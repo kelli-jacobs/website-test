@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '/Images/Logo.png'; // Make sure your logo is in the correct path
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '/Images/Logo.png'; // public path works this way
 
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
@@ -8,6 +10,7 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 `;
 
 const LogoSection = styled.div`
@@ -16,12 +19,12 @@ const LogoSection = styled.div`
 `;
 
 const LogoImg = styled.img`
-  height: 125px;
+  height: 80px;
   margin-right: 0.75rem;
 `;
 
 const BusinessName = styled(Link)`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: black;
   text-decoration: none;
@@ -31,9 +34,30 @@ const BusinessName = styled(Link)`
   }
 `;
 
+const Hamburger = styled.div`
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 const NavLinks = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: ${props => (props.open ? 'flex' : 'none')};
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -44,25 +68,33 @@ const StyledLink = styled(Link)`
   &:hover {
     color: #d3d3d3;
   }
+
+  @media (max-width: 768px) {
+    margin: 0.5rem 0;
+  }
 `;
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <>
     <StyledNav>
       <LogoSection>
         <LogoImg src={logo} alt="Business Logo" />
         <BusinessName to="/">Stamp In Time Photography LLC</BusinessName>
       </LogoSection>
 
-      <NavLinks>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/components/PhotoGallery">Portfolio</StyledLink>
-        <StyledLink to="/contact">Contact</StyledLink>
-        <StyledLink to="/biolinks">Bio Links</StyledLink>
+      <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+      </Hamburger>
+
+      <NavLinks open={menuOpen}>
+        <StyledLink to="/" onClick={() => setMenuOpen(false)}>Home</StyledLink>
+        <StyledLink to="/components/PhotoGallery" onClick={() => setMenuOpen(false)}>Portfolio</StyledLink>
+        <StyledLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</StyledLink>
+        <StyledLink to="/biolinks" onClick={() => setMenuOpen(false)}>Bio Links</StyledLink>
       </NavLinks>
     </StyledNav>
-    </>
   );
 }
 

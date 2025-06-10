@@ -7,7 +7,7 @@ function BioLinks() {
     { label: 'Book a Session', url: 'https://book.usesession.com/i/D52C_t-I5' },
     { label: 'Instagram', url: 'https://instagram.com/stamp.in.time.photography' },
     { label: 'Facebook', url: 'https://facebook.com/stampintimephotography' },
-    { label: 'Portfolio', url: 'components/photogallery' },
+    { label: 'Portfolio', url: '/components/photogallery' },
     { label: 'Contact', url: '/contact' },
   ];
 

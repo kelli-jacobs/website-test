@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react';
 
-
 function Home() {
   const scrollRef = useRef(null);
 
@@ -20,6 +19,13 @@ function Home() {
     import('bootstrap/dist/js/bootstrap.bundle.min.js');
   }, []);
 
+  // ✅ Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  
+
   return (
     <>
       {/* ✅ Horizontal Image Gallery with Buttons */}
@@ -28,15 +34,15 @@ function Home() {
         <div className="scroll-buttons">
           <button onClick={scrollLeft} className="btn btn-light me-2">‹</button>
           <div className="horizontal-scroll-container" ref={scrollRef}>
-            <img src="/Images/portraits/5477-1.jpg" alt="Memory 1" className="strip-image" />
-            <img src="/Images/portraits/5482-6.jpg" alt="Memory 1" className="strip-image" />
-            <img src="/Images/portraits/5451-19.jpg" alt="Memory 6" className="strip-image" />
-            <img src="/Images/portraits/5475-30.jpg" alt="Memory 2" className="strip-image" />
-            <img src="/Images/portraits/5475-89.jpg" alt="Memory 3" className="strip-image" />
-            <img src="/Images/portraits/5322-47.jpg" alt="Memory 4" className="strip-image" />
-            <img src="/Images/portraits/5446-4.jpg" alt="Memory 5" className="strip-image" />
-            <img src="/Images/portraits/Nikki-2.jpg" alt="Memory 6" className="strip-image" />
-            
+            <img src={`${import.meta.env.BASE_URL}Images/portraits/5322-47.jpg`} alt="input text here" className="strip-image" />
+            <img src={`${import.meta.env.BASE_URL}Images/portraits/5482-6.jpg`} alt="input text here" className="strip-image" />
+            <img src={`${import.meta.env.BASE_URL}Images/portraits/5451-19.jpg`} alt="input text here" className="strip-image" />
+            <img src={`${import.meta.env.BASE_URL}Images/portraits/5475-30.jpg`} alt="input text here" className="strip-image" />
+            <img src={`${import.meta.env.BASE_URL}Images/portraits/5475-89.jpg`} alt="input text here" className="strip-image" />
+            <img src={`${import.meta.env.BASE_URL}Images/portraits/5429-2.jpg`} alt="input text here" className="strip-image" />
+            <img src={`${import.meta.env.BASE_URL}Images/portraits/5446-4.jpg`} alt="input text here" className="strip-image" />
+            <img src={`${import.meta.env.BASE_URL}Images/portraits/Nikki-2.jpg`} alt="input text here" className="strip-image" />
+                        
           </div>
           <button onClick={scrollRight} className="btn btn-light ms-2">›</button>
         </div>
@@ -48,7 +54,7 @@ function Home() {
           Life is a beautiful journey, filled with fleeting moments that deserve to be cherished. From growing families to childhood milestones, anniversaries, graduations, and everything in between—each stage is a chapter worth capturing. Updating your portraits ensures that these precious moments don't just live in your memory, but are preserved in stunning detail for generations to come. Whether it's celebrating love, growth, or new beginnings, let's create timeless images that tell the evolving story of your life.
         </p>
         <img
-          src="/FilmStrip.png"
+          src={`${import.meta.env.BASE_URL}FilmStrip.png`}
           alt="Photography showcase"
           className="img-fluid"
           style={{ maxWidth: '100%', height: 'auto' }}
