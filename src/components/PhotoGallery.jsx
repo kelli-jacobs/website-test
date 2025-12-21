@@ -72,7 +72,7 @@ function PhotoGallery() {
                 handlePrev();
               }}
             >
-              ‹
+              ??1
             </button>
             <img
               src={withBaseUrl(filteredPhotos[selectedIndex].src)}
@@ -86,7 +86,7 @@ function PhotoGallery() {
                 handleNext();
               }}
             >
-              ›
+              ???
             </button>
           </div>
         )}

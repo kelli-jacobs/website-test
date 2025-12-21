@@ -1,9 +1,9 @@
 import React from 'react';
 import "./styles/biolinks.css";
 
-
 function BioLinks() {
   const baseUrl = import.meta.env.BASE_URL;
+
   const links = [
     { label: 'Book a Session', url: 'https://book.usesession.com/i/D52C_t-I5' },
     { label: 'Instagram', url: 'https://instagram.com/stamp.in.time.photography' },

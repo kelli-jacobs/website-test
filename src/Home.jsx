@@ -20,7 +20,7 @@ function Home() {
     import('bootstrap/dist/js/bootstrap.bundle.min.js');
   }, []);
 
-  // ✅ Scroll to top on mount
+  // ?o. Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,11 +29,11 @@ function Home() {
 
   return (
     <>
-      {/* ✅ Horizontal Image Gallery with Buttons */}
+      {/* ?o. Horizontal Image Gallery with Buttons */}
       <div className="gradient-container mb-4 text-center">
         <h2>Captured Memories</h2>
         <div className="scroll-buttons">
-          <button onClick={scrollLeft} className="btn btn-light me-2">‹</button>
+          <button onClick={scrollLeft} className="btn btn-light me-2">??1</button>
           <div className="horizontal-scroll-container" ref={scrollRef}>
             <img src={`${import.meta.env.BASE_URL}Images/portraits/5322-47.jpg`} alt="input text here" className="strip-image" />
             <img src={`${import.meta.env.BASE_URL}Images/portraits/5482-6.jpg`} alt="input text here" className="strip-image" />
@@ -45,14 +45,14 @@ function Home() {
             <img src={`${import.meta.env.BASE_URL}Images/portraits/Nikki-2.jpg`} alt="input text here" className="strip-image" />
                         
           </div>
-          <button onClick={scrollRight} className="btn btn-light ms-2">›</button>
+          <button onClick={scrollRight} className="btn btn-light ms-2">???</button>
         </div>
       </div>
 
-      {/* ✅ Intro Section */}
+      {/* ?o. Intro Section */}
       <div className="bg-light text-center py-3 gradient-container">
         <p className="lead mb-1">
-          Life is a beautiful journey, filled with fleeting moments that deserve to be cherished. From growing families to childhood milestones, anniversaries, graduations, and everything in between—each stage is a chapter worth capturing. Updating your portraits ensures that these precious moments don't just live in your memory, but are preserved in stunning detail for generations to come. Whether it's celebrating love, growth, or new beginnings, let's create timeless images that tell the evolving story of your life.
+          Life is a beautiful journey, filled with fleeting moments that deserve to be cherished. From growing families to childhood milestones, anniversaries, graduations, and everything in between??"each stage is a chapter worth capturing. Updating your portraits ensures that these precious moments don't just live in your memory, but are preserved in stunning detail for generations to come. Whether it's celebrating love, growth, or new beginnings, let's create timeless images that tell the evolving story of your life.
         </p>
         <img
           src={`${import.meta.env.BASE_URL}FilmStrip.png`}
@@ -92,11 +92,11 @@ function Home() {
 
     </div>
 
-      {/* ✅ Call-to-Action Section */}
+      {/* ?o. Call-to-Action Section */}
       <div className="bg-light text-center py-3 gradient-container">
         <h3>Let's make your forever memories!</h3>
         <p className="lead mb-1">
-          Time has a way of moving too fast, and the moments that make life beautiful often slip away before we realize. Family portraits and milestone photography aren't just pictures—they're tangible memories, frozen in time to be revisited for years to come. Whether it's a child's first steps, a long-awaited graduation, or generations gathered together, these images become treasured keepsakes that tell the story of love, laughter, and growth. Investing in quality photography means ensuring that these irreplaceable moments are captured with care, so they can be shared, remembered, and passed down for generations.
+          Time has a way of moving too fast, and the moments that make life beautiful often slip away before we realize. Family portraits and milestone photography aren't just pictures??"they're tangible memories, frozen in time to be revisited for years to come. Whether it's a child's first steps, a long-awaited graduation, or generations gathered together, these images become treasured keepsakes that tell the story of love, laughter, and growth. Investing in quality photography means ensuring that these irreplaceable moments are captured with care, so they can be shared, remembered, and passed down for generations.
         </p>
         <br />
         <button
@@ -111,7 +111,7 @@ function Home() {
     
 
 
-      {/* ✅ Placeholder Section 
+      {/* ?o. Placeholder Section 
       <div className="gradient-container text-center py-3">
          <section class="card-list">
       <article class="card">

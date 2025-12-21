@@ -2,6 +2,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaEnvelope, FaGlobe 
 
 function Footer() {
   const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <footer className="bg-dark text-black py-4 gradient-container footer-compact">
       <div className="container text-center footer-compact">

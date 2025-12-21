@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+const logoUrl = `${import.meta.env.BASE_URL}Images/Logo.png`;
 
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
@@ -75,12 +76,11 @@ const StyledLink = styled(Link)`
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const logo = `${import.meta.env.BASE_URL}Images/Logo.png`;
 
   return (
     <StyledNav>
       <LogoSection>
-        <LogoImg src={logo} alt="Business Logo" />
+        <LogoImg src={logoUrl} alt="Business Logo" />
         <BusinessName to="/">Stamp In Time Photography LLC</BusinessName>
       </LogoSection>
 
