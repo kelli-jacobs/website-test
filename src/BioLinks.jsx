@@ -3,6 +3,7 @@ import "./styles/biolinks.css";
 
 
 function BioLinks() {
+  const baseUrl = import.meta.env.BASE_URL;
   const links = [
     { label: 'Book a Session', url: 'https://book.usesession.com/i/D52C_t-I5' },
     { label: 'Instagram', url: 'https://instagram.com/stamp.in.time.photography' },
@@ -14,37 +15,37 @@ function BioLinks() {
   return (
     <div className="gradient-container text-center py-5">
       <img
-        src="/Images/portraits/5451-52.jpg"
+        src={`${baseUrl}Images/portraits/5451-52.jpg`}
         alt="Profile"
         className="rounded-circle mb-4"
         style={{ width: '150px', height: '150px', objectFit: 'cover' }}
       />
       <img
-        src="/Images/portraits/5475-30.jpg"
+        src={`${baseUrl}Images/portraits/5475-30.jpg`}
         alt="Profile"
         className="rounded-circle mb-4"
         style={{ width: '150px', height: '150px', objectFit: 'cover' }}
       />
       <img
-        src="/Images/portraits/5469-19.jpg"
+        src={`${baseUrl}Images/portraits/5469-19.jpg`}
         alt="Profile"
         className="rounded-circle mb-4"
         style={{ width: '150px', height: '150px', objectFit: 'cover' }}
       />
       <img
-        src="/Images/portraits/Nikki-2.jpg"
+        src={`${baseUrl}Images/portraits/Nikki-2.jpg`}
         alt="Profile"
         className="rounded-circle mb-4"
         style={{ width: '150px', height: '150px', objectFit: 'cover' }}
       />
       <img
-        src="/Images/portraits/5446-4.jpg"
+        src={`${baseUrl}Images/portraits/5446-4.jpg`}
         alt="Profile"
         className="rounded-circle mb-4"
         style={{ width: '150px', height: '150px', objectFit: 'cover' }}
       />
       <img
-        src="/Images/portraits/5322-47.jpg"
+        src={`${baseUrl}Images/portraits/5322-47.jpg`}
         alt="Profile"
         className="rounded-circle mb-4"
         style={{ width: '150px', height: '150px', objectFit: 'cover' }}

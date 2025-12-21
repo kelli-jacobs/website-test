@@ -5,6 +5,7 @@ import "../styles/gallery.css";
 function PhotoGallery() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const withBaseUrl = (src) => `${import.meta.env.BASE_URL}${src.replace(/^\//, "")}`;
 
   const categories = ["All", ...new Set(photoData.map((p) => p.category))];
 
@@ -57,7 +58,7 @@ function PhotoGallery() {
               className="gallery-item"
               onClick={() => handleImageClick(index)}
             >
-              <img src={photo.src} alt={`Photo ${index}`} />
+              <img src={withBaseUrl(photo.src)} alt={`Photo ${index}`} />
             </div>
           ))}
         </div>
@@ -74,7 +75,7 @@ function PhotoGallery() {
               ‹
             </button>
             <img
-              src={filteredPhotos[selectedIndex].src}
+              src={withBaseUrl(filteredPhotos[selectedIndex].src)}
               alt="Full view"
               onClick={(e) => e.stopPropagation()}
             />

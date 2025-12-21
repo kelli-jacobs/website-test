@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '/Images/Logo.png'; // public path works this way
 
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
@@ -76,6 +75,7 @@ const StyledLink = styled(Link)`
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const logo = `${import.meta.env.BASE_URL}Images/Logo.png`;
 
   return (
     <StyledNav>

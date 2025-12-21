@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 
 function Home() {
   const scrollRef = useRef(null);
+  const baseUrl = import.meta.env.BASE_URL;
 
   const scrollLeft = () => {
     if (scrollRef.current) {
@@ -64,7 +65,7 @@ function Home() {
       <div className="gradient-container text-center py-5">
       <a href="https://your-destination-link.com" target="_blank" rel="noopener noreferrer">
         <img
-          src="/Images/portraits/5469-19.jpg"
+          src={`${baseUrl}Images/portraits/5469-19.jpg`}
           alt="Profile"
           className="rounded-circle circle-home mb-4"
           style={{ width: '250px', height: '250px', objectFit: 'cover' }}
@@ -73,7 +74,7 @@ function Home() {
 
       <a href="https://your-destination-link.com" target="_blank" rel="noopener noreferrer">
         <img
-          src="/Images/portraits/5469-19.jpg"
+          src={`${baseUrl}Images/portraits/5469-19.jpg`}
           alt="Profile"
           className="rounded-circle circle-home mb-4"
           style={{ width: '250px', height: '250px', objectFit: 'cover' }}
@@ -82,7 +83,7 @@ function Home() {
 
       <a href="https://your-destination-link.com" target="_blank" rel="noopener noreferrer">
         <img
-          src="/Images/portraits/5469-19.jpg"
+          src={`${baseUrl}Images/portraits/5469-19.jpg`}
           alt="Profile"
           className="rounded-circle circle-home mb-4"
           style={{ width: '250px', height: '250px', objectFit: 'cover' }}
